@@ -1,0 +1,16 @@
+Package: StatComp20008
+Type: Package
+Title: Estimate Bart Simpson density by histogram and compare different bins.
+Version: 0.1.0
+Author: Yangshuhua
+Maintainer: Yangshuhua  <shuashua0608@mail.ustc.edu.cn>
+Description: Estimate Bart Simpson density by histogram and compare different bins.
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+Imports: Rcpp (>= 1.0.5), base, bootstrap, microbenchmark,ridge,MASS,boot,DAAG
+LinkingTo: Rcpp
+RoxygenNote: 7.1.1
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr     
+

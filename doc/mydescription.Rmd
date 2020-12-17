@@ -1,0 +1,29 @@
+---
+title: "My description"
+author: "20008"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{My description}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+ Estimate Bart Simpson density$f(x)=1/2 \phi(x;0,1)+1/10 \sum_{j=0}^4 \phi(x;j/2-1,1/10)$  by histogram and naive density estimator using different bandwidth.
+ 
+  Function $BS(x)$ draw ture density of Bart Simpson density function and function $HBS(n,h)$ uses n random points generated from Bart Simpson density with bandwidth of $h$. $NB(x,y,h)$ uses naive estimator with $x$ being estimated points and $y$ being samples generated from Bart Simpson density,$h$ being bandwidth.
+  
+Histogram: 
+Assume support of f is [0,1],devide support into m sized bins with $B_j=[\frac{j-1}{m},\frac{j}{m}]$,and the histogram estimator is defined by $$\hat{f_n}(x)=\sum_{j=1}^m\frac{\hat{p_j}}{h}I(x\in B_j),where ~~\hat{p_j}=\frac{Y_j}{n}$$
+
+Naive density estimator:
+$$\hat{f_n}(x)=\frac{1}{n}\sum_{i=1}^n\frac{1}{h}K(\frac{X_j-x}{h})$$
+Reference:
+https://www.bb.ustc.edu.cn/bbcswebdav/pid-66546-dt-content-rid-7067954_1/courses/STAT6125P.01.2020FA/Lec7.pdf
